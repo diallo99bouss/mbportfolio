@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "availability": "Available — Open to new opportunities",
+    "title": "Full Stack Developer",
+    "tagline": "C# .NET & React Expert — I turn complex ideas into high-performance solutions, from microservices architecture to polished user interfaces.",
+    "cta_journey": "View my journey",
+    "cta_contact": "Contact me",
+    "stats": {
+      "experience": "years of experience",
+      "users": "users impacted",
+      "features": "features delivered"
+    }
+  },
+  "about": {
+    "section_label": "About",
+    "title_line1": "Code. Precision.",
+    "title_line2": "Impact.",
+    "paragraphs": [
+      "Full Stack Developer with <strong>expertise in C# / .NET and React</strong>, I design robust and scalable systems — from back-end APIs to the most demanding user interfaces.",
+      "Experienced in <strong>Agile Scrum</strong> environments, I coordinated teams of 13 people across 15+ sprints at Colas Digital Solutions, delivering a platform used by <strong>1,000 users</strong>.",
+      "Currently pursuing an <strong>Expert IT — Big Data</strong> Master's degree at ISRI Paris, I combine technical vision and product sense to deliver concrete results."
+    ],
+    "meta": {
+      "location": "Location",
+      "stack": "Stack",
+      "education": "Education",
+      "languages": "Languages",
+      "stack_val": "C# .NET · React · TypeScript",
+      "education_val": "Expert IT Master's, Application and Big Data Developer, IRIS Paris",
+      "languages_val": "French · English"
+    },
+    "terminal": {
+      "blocks": [
+        { "out": ["Mamadou Boussouriou Diallo — Software Engineer"] },
+        {
+          "out": [
+            "→ Microservices .NET Architecture",
+            "→ Interactive Mapping (Mapbox)",
+            "→ DDD & Entity Framework",
+            "→ Azure DevOps & CI/CD",
+            "→ Agile Scrum Coordination"
+          ]
+        },
+        { "out": ["Open to opportunities ✓"] }
+      ]
+    }
+  },
+  "experience": {
+    "section_label": "Experience",
+    "title_line1": "My professional",
+    "title_line2": "journey.",
+    "items": [
+      {
+        "role": "Software Engineer",
+        "period": "Jan 2025 — Present",
+        "bullets": [
+          "Azure DevOps setup — repo, pipelines, backlog, branches",
+          "Full domain modeling: UML, entities, technical documentation",
+          "Microservices .NET / React architecture definition",
+          "UI/UX design and interface design system"
+        ]
+      },
+      {
+        "role": "Full Stack Developer (ext.)",
+        "period": "Sep 2024 — Jan 2026",
+        "bullets": [
+          "Development of the 2IN platform — 1,000 active Colas users",
+          "Interactive map with Mapbox & AG Grid — real-time cartographic display",
+          "Interactive weather module via Visual Crossing API (treeData / master-detail)",
+          "+20 C# (.NET) & React features — user satisfaction +95%",
+          "Agile Scrum coordination — team of 13 members, +15 sprints"
+        ]
+      },
+      {
+        "role": "Angular Frontend Intern",
+        "period": "Jan — Mar 2024",
+        "bullets": [
+          "Angular Material interface — smooth navigation between pages",
+          "Advanced filtering & CRUD operations across multiple components"
+        ]
+      },
+      {
+        "role": "Symfony Backend Intern",
+        "period": "Jul — Dec 2020",
+        "bullets": [
+          "Full authentication with Symfony Security",
+          "Multi-entity CRUD on the database"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "section_label": "Skills",
+    "title_line1": "My",
+    "title_line2": "toolkit.",
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "bdd": "Database",
+      "devops": "DevOps"
+    }
+  },
+  "contact": {
+    "section_label": "Contact",
+    "title_line1": "Let's work",
+    "title_line2": "together.",
+    "subtitle": "An ambitious project? A Full Stack mission? Send me a message — I reply within 24h.",
+    "form": {
+      "name_label": "Your name",
+      "name_placeholder": "John Doe",
+      "email_label": "Email",
+      "email_placeholder": "john@example.com",
+      "message_label": "Message",
+      "message_placeholder": "Describe your project or mission...",
+      "submit": "Send →"
+    },
+    "sent": "Message sent! I'll get back to you shortly.",
+    "sending": "Sending…",
+    "error": "Failed to send. Please retry or contact me directly.",
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "location": "Location"
+    }
+  }
+}

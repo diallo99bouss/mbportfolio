@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "contact": "Contact"
+  },
+  "hero": {
+    "availability": "Disponible — Ouvert aux nouvelles opportunités",
+    "title": "Développeur Full Stack",
+    "tagline": "Expert C# .NET & React — je transforme des idées complexes en solutions performantes, de l'architecture microservices aux interfaces soignées.",
+    "cta_journey": "Voir mon parcours",
+    "cta_contact": "Me contacter",
+    "stats": {
+      "experience": "ans d'expérience",
+      "users": "utilisateurs impactés",
+      "features": "fonctionnalités livrées"
+    }
+  },
+  "about": {
+    "section_label": "À propos",
+    "title_line1": "Code. Rigueur.",
+    "title_line2": "Impact.",
+    "paragraphs": [
+      "Développeur Full Stack avec une <strong>expertise en C# / .NET et React</strong>, je conçois des systèmes robustes et scalables — des API back-end aux interfaces utilisateur les plus exigeantes.",
+      "Habitué aux environnements <strong>Agile Scrum</strong>, j'ai coordonné des équipes de 13 personnes sur plus de 15 sprints chez Colas Digital Solutions, livrant une plateforme utilisée par <strong>1 000 utilisateurs</strong>.",
+      "En formation Mastère <strong>Expert IT — Big Data</strong> à l'ISRI Paris, je combine vision technique et sens du produit pour des résultats concrets."
+    ],
+    "meta": {
+      "location": "Lieu",
+      "stack": "Stack",
+      "education": "Formation",
+      "languages": "Langues",
+      "stack_val": "C# .NET · React · TypeScript",
+      "education_val": "Mastère Expert IT — Développeur d'Applications et de Big Data, IRIS Paris",
+      "languages_val": "Français · Anglais"
+    },
+    "terminal": {
+      "blocks": [
+        { "out": ["Mamadou Boussouriou Diallo — Ingénieur Logiciel"] },
+        {
+          "out": [
+            "→ Architecture microservices .NET",
+            "→ Cartographie interactive (Mapbox)",
+            "→ DDD & Entity Framework",
+            "→ Azure DevOps & CI/CD",
+            "→ Coordination Agile Scrum"
+          ]
+        },
+        { "out": ["Ouvert aux opportunités ✓"] }
+      ]
+    }
+  },
+  "experience": {
+    "section_label": "Expérience",
+    "title_line1": "Mon parcours",
+    "title_line2": "professionnel.",
+    "items": [
+      {
+        "role": "Ingénieur Logiciel",
+        "period": "Jan 2025 — Présent",
+        "bullets": [
+          "Configuration Azure DevOps — repo, pipelines, backlog, branches",
+          "Modélisation complète du domaine : UML, entités, documentation technique",
+          "Définition de l'architecture microservices .NET / React",
+          "Conception UI/UX et design system des interfaces"
+        ]
+      },
+      {
+        "role": "Développeur Full Stack (ext.)",
+        "period": "Sep 2024 — Jan 2026",
+        "bullets": [
+          "Développement de la plateforme 2IN — 1 000 utilisateurs actifs chez Colas",
+          "Carte interactive avec Mapbox & AG Grid — affichage cartographique temps réel",
+          "Module météo interactif via l'API Visual Crossing (treeData / master-detail)",
+          "+20 fonctionnalités C# (.NET) & React — satisfaction utilisateur +95%",
+          "Coordination Agile Scrum — équipe de 13 membres, +15 sprints"
+        ]
+      },
+      {
+        "role": "Stagiaire Frontend Angular",
+        "period": "Jan — Mar 2024",
+        "bullets": [
+          "Interface Angular Material — navigation fluide entre pages",
+          "Filtrage avancé & opérations CRUD sur plusieurs composants"
+        ]
+      },
+      {
+        "role": "Stagiaire Backend Symfony",
+        "period": "Juil — Déc 2020",
+        "bullets": [
+          "Authentification complète avec Symfony Security",
+          "CRUD multi-entités sur la base de données"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "section_label": "Compétences",
+    "title_line1": "Ma boîte",
+    "title_line2": "à outils.",
+    "categories": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "bdd": "Base de données",
+      "devops": "DevOps"
+    }
+  },
+  "contact": {
+    "section_label": "Contact",
+    "title_line1": "Travaillons",
+    "title_line2": "ensemble.",
+    "subtitle": "Un projet ambitieux ? Une mission Full Stack ? Envoyez-moi un message — je réponds sous 24h.",
+    "form": {
+      "name_label": "Votre nom",
+      "name_placeholder": "Jean Dupont",
+      "email_label": "Email",
+      "email_placeholder": "jean@exemple.fr",
+      "message_label": "Message",
+      "message_placeholder": "Décrivez votre projet ou mission...",
+      "submit": "Envoyer →"
+    },
+    "sent": "Message envoyé ! Je reviens vers vous rapidement.",
+    "sending": "Envoi en cours…",
+    "error": "Échec de l'envoi. Réessayez ou écrivez-moi directement.",
+    "info": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "location": "Localisation"
+    }
+  }
+}
