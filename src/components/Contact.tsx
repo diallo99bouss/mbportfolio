@@ -24,6 +24,10 @@ interface FormState {
   message: string;
 }
 
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  as string;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
 const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  as string;
@@ -31,17 +35,36 @@ const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  as string;
 const Contact: React.FC = () => {
   const { t } = useTranslation();
   const [form, setForm]       = useState<FormState>({ name: '', email: '', message: '' });
+  const [touched, setTouched] = useState<Partial<Record<keyof FormState, boolean>>>({});
   const [sent, setSent]       = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState(false);
+
+  const validate = (f: FormState): FormErrors => {
+    const errs: FormErrors = {};
+    if (!f.name.trim()) errs.name = t('contact.form.errors.name_required');
+    if (!f.email.trim()) errs.email = t('contact.form.errors.email_required');
+    else if (!EMAIL_RE.test(f.email.trim())) errs.email = t('contact.form.errors.email_invalid');
+    if (!f.message.trim()) errs.message = t('contact.form.errors.message_required');
+    else if (f.message.trim().length < 10) errs.message = t('contact.form.errors.message_too_short');
+    return errs;
+  };
+
+  const errors = validate(form);
+  const isValid = Object.keys(errors).length === 0;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setError(false);
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setTouched((t) => ({ ...t, [e.target.name]: true }));
+  };
+
   const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.message) return;
+    setTouched({ name: true, email: true, message: true });
+    if (!isValid) return;
 
     setLoading(true);
     setError(false);
@@ -107,6 +130,9 @@ const Contact: React.FC = () => {
                 placeholder={t('contact.form.name_placeholder')}
                 value={form.name}
                 onChange={handleChange}
+                onBlur={handleBlur}
+                error={touched.name && !!errors.name}
+                helperText={touched.name && errors.name}
                 fullWidth
                 size="small"
                 disabled={loading}
@@ -117,6 +143,9 @@ const Contact: React.FC = () => {
                 placeholder={t('contact.form.email_placeholder')}
                 value={form.email}
                 onChange={handleChange}
+                onBlur={handleBlur}
+                error={touched.email && !!errors.email}
+                helperText={touched.email && errors.email}
                 fullWidth
                 size="small"
                 disabled={loading}
@@ -127,6 +156,9 @@ const Contact: React.FC = () => {
                 placeholder={t('contact.form.message_placeholder')}
                 value={form.message}
                 onChange={handleChange}
+                onBlur={handleBlur}
+                error={touched.message && !!errors.message}
+                helperText={touched.message && errors.message}
                 fullWidth
                 multiline
                 rows={5}
@@ -146,7 +178,7 @@ const Contact: React.FC = () => {
                 <Button
                   variant="contained"
                   onClick={handleSubmit}
-                  disabled={loading || !form.name || !form.email || !form.message}
+                  disabled={loading || (Object.keys(touched).length > 0 && !isValid)}
                   startIcon={loading ? <CircularProgress size={14} color="inherit" /> : null}
                 >
                   {loading ? t('contact.sending') : t('contact.form.submit')}

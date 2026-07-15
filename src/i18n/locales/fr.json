@@ -119,7 +119,14 @@
       "email_placeholder": "jean@exemple.fr",
       "message_label": "Message",
       "message_placeholder": "Décrivez votre projet ou mission...",
-      "submit": "Envoyer →"
+      "submit": "Envoyer →",
+      "errors": {
+        "name_required": "Veuillez indiquer votre nom.",
+        "email_required": "Veuillez indiquer votre email.",
+        "email_invalid": "Format d'email invalide.",
+        "message_required": "Veuillez écrire un message.",
+        "message_too_short": "Votre message est un peu court (10 caractères minimum)."
+      }
     },
     "sent": "Message envoyé ! Je reviens vers vous rapidement.",
     "sending": "Envoi en cours…",

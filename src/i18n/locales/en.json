@@ -119,7 +119,14 @@
       "email_placeholder": "john@example.com",
       "message_label": "Message",
       "message_placeholder": "Describe your project or mission...",
-      "submit": "Send →"
+      "submit": "Send →",
+      "errors": {
+        "name_required": "Please enter your name.",
+        "email_required": "Please enter your email.",
+        "email_invalid": "Invalid email format.",
+        "message_required": "Please write a message.",
+        "message_too_short": "Your message is a bit short (10 characters minimum)."
+      }
     },
     "sent": "Message sent! I'll get back to you shortly.",
     "sending": "Sending…",
