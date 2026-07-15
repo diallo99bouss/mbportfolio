@@ -61,7 +61,7 @@ const Hero: React.FC<HeroProps> = ({ onNav }) => {
           {/* Name */}
           <Typography
             variant="h1"
-            sx={{ fontSize: { xs: '2.8rem', md: '5rem' }, lineHeight: 1.0, mb: 3 }}
+            sx={{ fontSize: { xs: '2.2rem', sm: '2.8rem', md: '5rem' }, lineHeight: 1.05, mb: 3 }}
           >
             {d.name.split(' ').slice(0, 2).join(' ')}<br />
             <Box component="span" sx={{ color: 'primary.main' }}>
@@ -105,13 +105,19 @@ const Hero: React.FC<HeroProps> = ({ onNav }) => {
           <Divider sx={{ mb: 3 }} />
 
           {/* Stats */}
-          <Stack direction="row" spacing={6} justifyContent="center">
+          <Stack
+            direction="row"
+            spacing={{ xs: 2.5, sm: 6 }}
+            justifyContent="center"
+            flexWrap="wrap"
+            useFlexGap
+          >
             {d.stats.map((s, i) => (
-              <Box key={i}>
-                <Typography variant="h2" sx={{ fontSize: '1.9rem', lineHeight: 1.2 }}>
+              <Box key={i} sx={{ textAlign: 'center' }}>
+                <Typography variant="h2" sx={{ fontSize: { xs: '1.5rem', sm: '1.9rem' }, lineHeight: 1.2 }}>
                   {s.num}
                 </Typography>
-                <Typography variant="caption" sx={{ color: 'text.secondary', fontSize: '0.65rem' }}>
+                <Typography variant="caption" sx={{ color: 'text.secondary', fontSize: { xs: '0.58rem', sm: '0.65rem' } }}>
                   {statLabels[i]}
                 </Typography>
               </Box>
